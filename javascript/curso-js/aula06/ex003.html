@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa em JS</title>
+    <style>
+        body {
+            background-color: rgba(70, 101, 240, 0.74);
+            color: lightgrey;
+            font: normal 20px arial;
+            border: 4px solid rgba(0, 0, 0, 0.733);
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            color: goldenrod;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo !!!</h1>
+    <p>Já me livre da maldição</p>
+
+    <script>
+        var n1 = Number(window.prompt("qual o primeiro número ?"))
+        var n2 =  Number(window.prompt("Qual o segundo número?"))
+        var s = n1 + n2 
+        window.alert(` A soma entre ${String(n1)} e ${String(n2)} é igual a ${String(s)}`) /*Sintaxe */
+        /* (+) Serve para concatenação 
+        (nuber + number) = soma
+        (string + string) = concatenação 
+        */
+    </script>
+</body>
+</html>

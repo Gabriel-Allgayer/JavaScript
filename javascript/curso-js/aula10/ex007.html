@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Soma</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 40px;
+        }
+        main {
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 15px;
+        }
+
+        #res {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin: 30px;
+        }
+        #decor {
+            box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.39);
+            border-radius: 10px;
+            border: 3px solid black;
+            margin-left: 20vw;
+            margin-right: 20vw;
+            background-color: rgba(255, 228, 196, 0.541);
+        }
+        body {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="decor">
+        <h1>Somando Valores</h1>
+        <main>
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+        </main>
+        <div id="res">
+            resultado
+        </div>
+        <script>
+            function somar() {
+                var n1 = document.querySelector('input#txtn1')
+                var n2 = document.querySelector('input#txtn2')
+                var res = document.querySelector('div#res')
+                var p1 = Number(n1.value)
+                var p2 = Number(n2.value)
+                var s = p1 + p2
+                res.innerHTML = `A soma dos números a cima é <strong>${s}</strong>`
+        
+              }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area {
+            font: normal 25px arial;
+            background-color: rgb(90, 192, 90);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+           /* font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: normal; 
+            */
+
+        }
+        /* EVENTO 
+        #area:hover {
+            background-color: black;
+            color: white;
+            text-decoration: underline;
+        }
+        */
+        #ex {
+            font: normal 25px arial;
+            background-color: rgb(90, 192, 90);
+            color: white;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="area" onclick="clickar()" onmouseenter="contato()"onmouseout="tirou()">
+        Interaja...
+    </div>
+
+    <br>
+    <div id="ex">
+        Exemplo do Guanabara
+    </div>
+    <script>
+        function clickar() {
+            var a = document.getElementById ('area')
+            a.innerText = 'Mexe ai n viado'
+        }
+        
+        function contato() {
+            var b = document.getElementById ('area') 
+            b.style.background = 'blue'
+        }
+
+        function tirou() {
+            var c = document.getElementById ('area')
+            c.style.background = 'rgb(90, 192, 90)'
+            c.innerText = 'Interaja...'
+        }
+    </script>
+    <script>
+        var exemplo = document.getElementById('ex')
+        exemplo.addEventListener('click', clickou)
+        exemplo.addEventListener('mouseenter', contat)
+        exemplo.addEventListener('mouseout', saiu)
+        
+        function clickou() {
+            exemplo.innerText = 'Opa tudo bom ?'
+        }
+        function contat() {
+            exemplo.style.background = 'pink'
+        }
+        function saiu () {
+            exemplo.style.background = 'rgb(90, 192, 90)'
+            exemplo.innerText = 'Exeplo do Guanabara'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgba(2, 87, 6, 0.815);
+            color: rgb(255, 255, 255);
+            font: normal 18px arial;
+        }
+        #pp {
+           border: 1px solid black;
+           width: 200px;
+           padding: 10px;
+           text-align: center;
+        }
+        .tit {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tit">Iniciando estudos com DOM</h1>
+    <p id="pp">Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">
+        Clique em mim
+    </div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write( `Está escrito assim: ${p1.innerText} <br> <br>`)
+        var parag = window.document.getElementById('pp')
+        window.document.write (parag.innerText)
+        /* 
+        var d = window.document.getElementById('msg')
+        var e = document.getElementsByClassName ('tit')[0]
+         e.innerText = 'ALOOOOOOOOOOOOOOO' 
+         d.innerText = ('Estou aguardando') 
+         */
+
+        /*  MAIS RECOMENDADO - SELETOR
+        var a = document.querySelector ('div#msg')
+        a.style.color = 'grey'
+        a.style.background = 'blue'
+        */
+        
+        
+        
+    </script>
+</body>
+</html>

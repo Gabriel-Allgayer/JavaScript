@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        input {
+            margin: 10px;
+        }
+        #botao {
+            width: 15vh;
+        }
+        h1 {
+            text-align: center;
+            padding-bottom: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }
+        main {
+            border-radius: 10px;
+            border: 3px solid black;
+            padding: 30px;
+            margin-left: 25vh;
+            margin-top: 10vh;
+            margin-right: 25vh;
+            background-color: black;
+            color: white;
+            box-shadow: 1px 3px 15px rgb(0, 51, 0);
+        }
+        body {
+            background-color: rgba(50, 117, 50, 0.801);
+            font: normal 20px arial;
+    
+        }
+        p {
+            padding-left: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+     <main>
+         <h1>Informações</h1>
+         <p>Qual o seu nome ?</p>
+         
+             <ul><li><input type="text" name="nometxt" id="nometxt"></li></ul>
+             <br>
+             <p>Qual país você mora</p>
+             <ul>
+                <li><input type="text" name="paistxt" id="paistxt"></li>
+            </ul>
+         
+         <ul><input type="button" value="ir" onclick="clickar()" id="botao"></ul>
+         <div id="resposta">
+         </div>
+         <script>
+            function clickar() {
+                var n = document.querySelector('input#nometxt')
+                var nome = String(n.value)
+                var p = document.querySelector('input#paistxt')
+                var pais = String(p.value)
+                var res = document.querySelector('div#resposta')
+                res.innerHTML = `<p>Prazer ${nome},</p>`
+                res.innerHTML += `<p>Você mora no ${pais} , que legal </p>`
+                if (pais == 'Brasil') {
+                    res.innerHTML += '<p> Você é brasileiro</p>'
+                }   else {
+                    res.innerHTML += '<p> Você é estrangeiro</p>'
+                }
+            }
+         </script>
+     </main>
+</body>
+</html>
