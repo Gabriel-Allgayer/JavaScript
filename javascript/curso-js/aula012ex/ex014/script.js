@@ -2,8 +2,8 @@ function carregar() {
     var msg = window.document.querySelector('div#msg')
     var img = document.getElementById('img')
     var data = new Date ()
-     // var hora = data.getHours () 
-     var hora = 1
+     var hora = data.getHours () 
+     
     
     msg.innerHTML = `<br><p> Agora são ${hora} Horas <p>`
 
