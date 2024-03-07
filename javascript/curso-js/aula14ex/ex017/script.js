@@ -8,7 +8,7 @@ var tab = document.querySelector('#seltab')
         let n = Number(num.value)
         let c = 1
         tab.innerHTML = ''
-        while (c <= 20) {
+        while (c <= 100) {
             let item = document.createElement ('option')
             item.text = `${n} * ${c} = ${n*c}`
             tab.appendChild(item)
