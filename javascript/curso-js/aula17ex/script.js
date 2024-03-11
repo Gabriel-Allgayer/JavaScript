@@ -37,7 +37,7 @@ function adicionar() {
         window.alert('Número inválido/já adicionado ou campo não preenchido')
     }
     num.value = ``
-    num.focus()5
+    num.focus()
 } 
 
 function finalizar() {
